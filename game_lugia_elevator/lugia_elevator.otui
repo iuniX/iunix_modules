@@ -1,0 +1,73 @@
+MainWindow
+  id: elevatorWindow
+  focusable: true
+  size: 183 250
+  image-source: images/background.png
+  visible: false
+  @onEscape: hide()
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: parent.top
+    margin-left: 25
+    image-source: images/button_off.png
+    @onClick: onClickButton(1)
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 25
+    image-source: images/button_off.png
+    @onClick: onClickButton(2)
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 25
+    image-source: images/button_off.png
+    @onClick: onClickButton(3)
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 25
+    image-source: images/button_off.png
+    @onClick: onClickButton(4)
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 25
+    image-source: images/button_off.png
+    @onClick: onClickButton(5)
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: parent.top
+    margin-left: 95
+    image-source: images/1.png
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 92
+    image-source: images/2.png
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 90
+    image-source: images/3.png
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 90
+    image-source: images/4.png
+
+  NumberButton
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 90
+    image-source: images/5.png
+    

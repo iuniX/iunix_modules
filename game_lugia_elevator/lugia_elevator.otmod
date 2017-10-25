@@ -1,0 +1,11 @@
+Module
+  name: game_lugia_elevator
+  description: Elevator Window
+  author: iuniX
+  website: www.otclient.info
+  autoload-priority: 1001
+  autoload: true
+  sandboxed: true
+  scripts: [ lugia_elevator ]
+  @onLoad: init()
+  @onUnload: terminate()
