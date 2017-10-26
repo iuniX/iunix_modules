@@ -1,73 +1,74 @@
+NumbersButton < UIButton
+  size: 35 35
+  image-clip: 0 0 35 35
+  margin-left: 90
+  margin-top: 8
+
+FloorNumber < UIButton
+  size: 35 35
+  margin-left: 25
+  margin-top: 8
+
 MainWindow
   id: elevatorWindow
   focusable: true
   size: 183 250
-  image-source: images/background.png
+  image-source: images/background
   visible: false
   @onEscape: hide()
 
-  NumberButton
+  FloorNumber
+    id: number1
     anchors.left: parent.left 
-    anchors.top: parent.top
-    margin-left: 25
-    image-source: images/button_off.png
+    anchors.top: parent.top    
     @onClick: onClickButton(1)
 
-  NumberButton
+  FloorNumber
+    id: number2
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 25
-    image-source: images/button_off.png
     @onClick: onClickButton(2)
 
-  NumberButton
+  FloorNumber
+    id: number3
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 25
-    image-source: images/button_off.png
     @onClick: onClickButton(3)
 
-  NumberButton
+  FloorNumber
+    id: number4
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 25
-    image-source: images/button_off.png
     @onClick: onClickButton(4)
 
-  NumberButton
+  FloorNumber
+    id: number5
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 25
-    image-source: images/button_off.png
     @onClick: onClickButton(5)
 
-  NumberButton
+  NumbersButton
     anchors.left: parent.left 
     anchors.top: parent.top
-    margin-left: 95
-    image-source: images/1.png
+    image-source: images/1
 
-  NumberButton
+  NumbersButton
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 92
-    image-source: images/2.png
+    image-source: images/2
 
-  NumberButton
+  NumbersButton
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 90
-    image-source: images/3.png
+    image-source: images/3
 
-  NumberButton
+  NumbersButton
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 90
-    image-source: images/4.png
+    image-source: images/4
 
-  NumberButton
+  NumbersButton
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    margin-left: 90
-    image-source: images/5.png
+    image-source: images/5
     
