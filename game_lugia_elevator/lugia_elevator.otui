@@ -1,74 +1,90 @@
-NumbersButton < UIButton
+ElevatorFloorNumber < UIButton
   size: 35 35
   image-clip: 0 0 35 35
-  margin-left: 90
-  margin-top: 8
+  margin-left: 50
+  margin-top: 8  
 
-FloorNumber < UIButton
+ElevatorButton < UIButton
   size: 35 35
-  margin-left: 25
+  margin-left: 10
   margin-top: 8
+  image-source: images/off
+  $on:
+    image-source: images/on 
+  image-color: #ffffffaa
+  image-offset: 1 1
+  $hover:
+    image-color: white
+  $pressed:
+    image-offset: 2 2
 
 MainWindow
   id: elevatorWindow
+  !text: tr("Elevator Panel")
+  font: exo-16px-ultra-bold-italic
   focusable: true
-  size: 183 250
+  size: 130 250
+  padding-top: 22
+  border-width: 1
+  border-color: #191919
   image-source: images/background
   visible: false
   @onEscape: hide()
 
-  FloorNumber
-    id: number1
+  ElevatorButton
+    id: number5
     anchors.left: parent.left 
     anchors.top: parent.top    
-    @onClick: onClickButton(1)
+    @onClick: onClickButton(5)
 
-  FloorNumber
-    id: number2
-    anchors.left: parent.left 
-    anchors.top: prev.bottom
-    @onClick: onClickButton(2)
-
-  FloorNumber
-    id: number3
-    anchors.left: parent.left 
-    anchors.top: prev.bottom
-    @onClick: onClickButton(3)
-
-  FloorNumber
+  ElevatorButton
     id: number4
     anchors.left: parent.left 
     anchors.top: prev.bottom
     @onClick: onClickButton(4)
 
-  FloorNumber
-    id: number5
+  ElevatorButton
+    id: number3
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    @onClick: onClickButton(5)
+    @onClick: onClickButton(3)
 
-  NumbersButton
+  ElevatorButton
+    id: number2
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    @onClick: onClickButton(2)
+
+  ElevatorButton
+    id: number1
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    @onClick: onClickButton(1)
+
+  ElevatorFloorNumber
     anchors.left: parent.left 
     anchors.top: parent.top
-    image-source: images/1
+    margin-left: 51
+    image-source: images/5
 
-  NumbersButton
-    anchors.left: parent.left 
-    anchors.top: prev.bottom
-    image-source: images/2
-
-  NumbersButton
-    anchors.left: parent.left 
-    anchors.top: prev.bottom
-    image-source: images/3
-
-  NumbersButton
+  ElevatorFloorNumber
     anchors.left: parent.left 
     anchors.top: prev.bottom
     image-source: images/4
 
-  NumbersButton
+  ElevatorFloorNumber
     anchors.left: parent.left 
     anchors.top: prev.bottom
-    image-source: images/5
+    image-source: images/3
+
+  ElevatorFloorNumber
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    image-source: images/2
+
+  ElevatorFloorNumber
+    anchors.left: parent.left 
+    anchors.top: prev.bottom
+    margin-left: 54
+    image-source: images/1
     
